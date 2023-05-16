@@ -1,4 +1,5 @@
 // import { RingLoader } from "react-spinners";
+import { RingLoader } from "react-spinners";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
@@ -13,7 +14,15 @@ const Gallery = () => {
       <Header />
 
       {loader && <Loader />}
-      <section className="w-full min-h-[300px] bg-white text-slate-700 pt-16 sm:pt-[90px] bg-gallery bg-no-repeat bg-cover bg-[center_top_-13rem]">
+      <section className="w-full h-screen bg-white flex justify-center items-center">
+        <div className="flex flex-col gap-5">
+          <h2 className="uppercase font-medium text-[1.5rem]">
+            Under Construction
+          </h2>
+          <RingLoader color="#4b2a05" className="mx-auto" />
+        </div>
+      </section>
+      {/* <section className="w-full min-h-[300px] bg-white text-slate-700 pt-16 sm:pt-[90px] bg-gallery bg-no-repeat bg-cover bg-[center_top_-13rem]">
         <div className="w-full min-h-[300px] lg:px-[15%] px-5 bg-black/50 flex justify-center items-center first-section-text text-[2.5rem] text-white uppercase">
           <h1>Gallery Page</h1>
         </div>
@@ -24,7 +33,7 @@ const Gallery = () => {
             Dinner nite fest
           </h1>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
       <ScrollToTop />

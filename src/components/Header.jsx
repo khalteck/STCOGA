@@ -67,7 +67,7 @@ const Header = () => {
               Gallery
             </Link>
             <Link
-              to="/contact"
+              to="/"
               className={`cursor-pointer px-2 py-1 ${
                 currentPage === "/contact"
                   ? "border-[#4b2a05] border-b-2"
@@ -114,7 +114,7 @@ const Header = () => {
               onClick={hideDropdown}
               className="w-[35%] h-full float-left bg-transparent"
             ></div>
-            <ul className="slide float-right w-[65%] h-full bg-black/80 px-[30px] text-[1rem] text-white pt-[100px] uppercase">
+            <ul className="slide float-right w-[65%] h-full bg-[#4b2a05] px-[30px] text-[1rem] text-white pt-[100px] uppercase">
               <li className="my-4">
                 <Link to="/" onClick={hideDropdown}>
                   <div className="w-full">Home</div>
@@ -127,7 +127,7 @@ const Header = () => {
               </li>
 
               <li className="my-4">
-                <Link to="/contact" onClick={hideDropdown}>
+                <Link to="/" onClick={hideDropdown}>
                   <div className="w-full">contact</div>
                 </Link>
               </li>
