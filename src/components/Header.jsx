@@ -102,19 +102,22 @@ const Header = () => {
 
         {openMenu && (
           <div className="w-full h-[100vh] z-[200] bg-black/80 fixed top-0 left-0 lg:hidden">
-            <img
-              className="w-[30px] h-[30px] cursor-pointer mr-[25px] absolute top-[30px] right-[10px] text-white"
-              alt=""
-              src="/images/icons8-cancel-white-48.png"
-              onClick={() => {
-                handleClick();
-              }}
-            />
+            <div className="bg-[#4b2a05] p-2 rounded-full cursor-pointer absolute top-[30px] right-[10px]">
+              {" "}
+              <img
+                className="w-7 h7"
+                alt=""
+                src="/images/icons8-cancel-white-48.png"
+                onClick={() => {
+                  handleClick();
+                }}
+              />
+            </div>
             <div
               onClick={hideDropdown}
               className="w-[35%] h-full float-left bg-transparent"
             ></div>
-            <ul className="slide float-right w-[65%] h-full bg-[#4b2a05] px-[30px] text-[1rem] text-white pt-[100px] uppercase">
+            <ul className="slide float-right w-[65%] h-full bg-white px-[30px] text-[1rem] text-[#4b2a05] pt-[100px] uppercase">
               <li className="my-4">
                 <Link to="/" onClick={hideDropdown}>
                   <div className="w-full">Home</div>

@@ -45,7 +45,10 @@ const Homepage = () => {
           </div>
         </section>
 
-        <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5">
+        <section
+          id="contact"
+          className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5"
+        >
           <div className="w-fit mx-auto">
             <h1 className="text-[1.2rem] sm:text-[2rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
               Get In Touch

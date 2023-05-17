@@ -697,6 +697,10 @@ video {
   height: 100vh;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .min-h-\[200px\] {
   min-height: 200px;
 }
@@ -756,6 +760,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .translate-x-\[-50\%\] {
@@ -846,6 +858,10 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-b-3xl {
