@@ -1,0 +1,42 @@
+[
+  {
+    "image": "/images/exec1.jpeg",
+    "name": "Mopelola Toyobo",
+    "position": "President"
+  },
+  {
+    "image": "/images/exec2.jpeg",
+    "name": "Simbiat Longe",
+    "position": "Vice President"
+  },
+  {
+    "image": "/images/exec3.jpeg",
+    "name": "Adeola Gbadamosi",
+    "position": "Chief Whip"
+  },
+  {
+    "image": "/images/exec8.jpeg",
+    "name": "Funke Alero Nana",
+    "position": "Treasurer"
+  },
+  {
+    "image": "/images/exec4.jpeg",
+    "name": "Adeyinka Lawal",
+    "position": "Public relations officer"
+  },
+  {
+    "image": "/images/exec5.jpeg",
+    "name": "Besty Wittine",
+    "position": "Social Secretary"
+  },
+  {
+    "image": "/images/exec6.jpeg",
+    "name": "Olaide Odelana",
+    "position": "General Secretary"
+  },
+  {
+    "image": "/images/exec7.jpeg",
+    "name": "Funmi Adeleke",
+    "position": "Welfare Officer"
+  }
+]

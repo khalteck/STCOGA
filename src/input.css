@@ -6,4 +6,7 @@
   .first-section-text {
     text-shadow: 1px 1px #000000;
   }
+  .box::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
 }

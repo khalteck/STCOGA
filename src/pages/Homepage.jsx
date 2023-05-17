@@ -18,7 +18,7 @@ const Homepage = () => {
       <main className="w-full min-h-screen bg-blue-50 pt-16 sm:pt-[90px]">
         <section className="w-full h-[300px] sm:h-[650px] bg-home bg-no-repeat bg-cover bg-center">
           <div className="overlay w-full h-[300px] sm:h-[650px] flex justify-center items-center">
-            <div className="w-full h-fit bg-[#4b2a05]/30 md:rounded-3xl p-3 md:p-5 flex flex-col justify-center items-center">
+            <div className="w-full md:w-fit h-fit bg-[#4b2a05]/30 md:rounded-3xl p-3 md:p-8 flex flex-col justify-center items-center">
               <h1 className="text-white text-[1.2rem] md:text-[2.75em] text-center uppercase first-section-text">
                 ST Teresa’s College Old Girls Association <br /> (STCOGA) UK &
                 EUROPE
@@ -56,7 +56,7 @@ const Homepage = () => {
               <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
                 <img src="/images/phone.png" alt="" className="w-14 h-14" />
                 <p className="font-bold text-[1.25rem]">Call Us</p>
-                <p className="font-medium text-[1.25rem]">+1 456 777 6341</p>
+                {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
               </div>
 
               <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
