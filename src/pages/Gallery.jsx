@@ -1,5 +1,3 @@
-// import { RingLoader } from "react-spinners";
-// import { RingLoader } from "react-spinners";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Loader from "../components/Loader";
@@ -7,6 +5,9 @@ import { useAppContext } from "../contexts/AppContext";
 import ScrollToTop from "../ScrollToTop";
 import irelandData from "../data/ireland.json";
 import execData from "../data/exec.json";
+import projectData from "../data/project.json";
+import niteData from "../data/quiznite.json";
+import fundraiserData from "../data/fundraiser.json";
 
 const Gallery = () => {
   const { loader } = useAppContext();
@@ -29,15 +30,18 @@ const Gallery = () => {
           <h1>STCOGA Gallery</h1>
         </div>
       </section>
-      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5">
+      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           Executives
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4">
+          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
             {execData?.map((item, index) => (
-              <div key={index} className="w-[300px] md:w-[400px] relative">
+              <div
+                key={index}
+                className="w-[300px] md:w-[400px] relative snap-start snap-always"
+              >
                 <img
                   alt=""
                   src={item?.image}
@@ -57,16 +61,58 @@ const Gallery = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5">
+      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
+        <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+          Senior Secondary School Solar Power and Electricity Installation
+          Project
+        </h1>
+        <p className="text-[.85rem]">Scroll to the left to see more...</p>
+        <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
+          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+            {projectData?.map((item, index) => (
+              <div
+                key={index}
+                className="w-[300px] md:w-[400px] relative snap-start snap-always"
+              >
+                {item?.image ? (
+                  <img
+                    alt=""
+                    src={item?.image}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                ) : (
+                  <video
+                    src={item?.video}
+                    controls
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                )}
+                <p
+                  className={`absolute ${
+                    item?.video ? "top-0" : "bottom-0"
+                  } left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center`}
+                >
+                  {item?.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>{" "}
+      </section>
+
+      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           Trip to Ardfoyle Convent, Cork Ireland
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
 
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4">
+          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
             {irelandData?.map((item, index) => (
-              <div key={index} className="w-[300px] md:w-[400px] relative">
+              <div
+                key={index}
+                className="w-[300px] md:w-[400px] relative snap-start snap-always"
+              >
                 <img
                   alt=""
                   src={item?.image}
@@ -81,68 +127,48 @@ const Gallery = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5">
+      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
-          slide 2
+          St Teresa’s College Ibadan 90th Anniversary and Fundraising{" "}
         </h1>
+        <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4">
-            {/* {irelandData?.map((item, index) => (
-              <div key={index} className="w-[300px] md:w-[400px] relative">
+          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+            {fundraiserData?.map((item, index) => (
+              <div
+                key={index}
+                className="w-[300px] md:w-[400px] relative snap-start snap-always"
+              >
                 <img
                   alt=""
                   src={item?.image}
                   className="w-full h-full object-cover rounded-lg"
                 />
-                <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center">
-                  fullname
-                </p>
               </div>
-            ))} */}
+            ))}
           </div>
         </div>{" "}
       </section>
 
-      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5">
+      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
-          slide 3
+          NSF Quiz nite
         </h1>
+        <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4">
-            {/* {irelandData?.map((item, index) => (
-              <div key={index} className="w-[300px] md:w-[400px] relative">
+          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+            {niteData?.map((item, index) => (
+              <div
+                key={index}
+                className="w-[300px] md:w-[400px] relative snap-start snap-always"
+              >
                 <img
                   alt=""
                   src={item?.image}
                   className="w-full h-full object-cover rounded-lg"
                 />
-                <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center">
-                  fullname
-                </p>
               </div>
-            ))} */}
-          </div>
-        </div>{" "}
-      </section>
-
-      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5">
-        <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
-          slide 4
-        </h1>
-        <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4">
-            {/* {irelandData?.map((item, index) => (
-              <div key={index} className="w-[300px] md:w-[400px] relative">
-                <img
-                  alt=""
-                  src={item?.image}
-                  className="w-full h-full object-cover rounded-lg"
-                />
-                <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center">
-                  fullname
-                </p>
-              </div>
-            ))} */}
+            ))}
           </div>
         </div>{" "}
       </section>
