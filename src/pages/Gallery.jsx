@@ -36,7 +36,7 @@ const Gallery = () => {
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+          <div className="flex gap-4 snap-mandatory snap-x ">
             {execData?.map((item, index) => (
               <div
                 key={index}
@@ -68,7 +68,7 @@ const Gallery = () => {
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+          <div className="flex gap-4 snap-mandatory snap-x ">
             {projectData?.map((item, index) => (
               <div
                 key={index}
@@ -107,7 +107,7 @@ const Gallery = () => {
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
 
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+          <div className="flex gap-4 snap-mandatory snap-x ">
             {irelandData?.map((item, index) => (
               <div
                 key={index}
@@ -133,7 +133,7 @@ const Gallery = () => {
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+          <div className="flex gap-4 snap-mandatory snap-x ">
             {fundraiserData?.map((item, index) => (
               <div
                 key={index}
@@ -156,7 +156,7 @@ const Gallery = () => {
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4 border  border-red-500 snap-mandatory snap-x ">
+          <div className="flex gap-4 snap-mandatory snap-x ">
             {niteData?.map((item, index) => (
               <div
                 key={index}
