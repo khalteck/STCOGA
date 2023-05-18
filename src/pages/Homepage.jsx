@@ -16,8 +16,8 @@ const Homepage = () => {
 
       {loader && <Loader />}
       <main className="w-full min-h-screen bg-blue-50 pt-16 md:pt-[90px]">
-        <section className="w-full h-[300px] sm:h-[650px] lg:h-[90vh] bg-home bg-no-repeat bg-cover bg-center">
-          <div className="overlay w-full h-[300px] sm:h-[650px] lg:h-[90vh] flex justify-center items-center relative">
+        <section className="w-full h-[400px] sm:h-[650px] lg:h-[90vh] bg-home bg-no-repeat bg-cover bg-center">
+          <div className="overlay w-full h-[400px] sm:h-[650px] lg:h-[90vh] flex justify-center items-center relative">
             <div className="w-full md:w-fit h-fit bg-[#4b2a05]/30 md:rounded-3xl p-3 md:p-8 flex flex-col justify-center items-center">
               <h1 className="text-white text-[1.2rem] md:text-[2.75em] text-center uppercase first-section-text">
                 ST Teresa’s College Old Girls Association <br /> (STCOGA) UK &
