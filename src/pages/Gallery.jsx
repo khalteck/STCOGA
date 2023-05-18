@@ -25,13 +25,13 @@ const Gallery = () => {
           <RingLoader color="#4b2a05" className="mx-auto" />
         </div>
       </section> */}
-      <section className="w-full min-h-[200px] md:min-h-[300px] bg-white text-slate-700 pt-16 sm:pt-[90px] bg-sec bg-no-repeat bg-cover md:bg-[center_top_-10rem] lg:bg-[center_top_-14rem]">
+      <section className="w-full min-h-[200px] md:min-h-[300px] bg-white text-slate-700 pt-16 md:pt-[90px] bg-sec bg-no-repeat bg-cover md:bg-[center_top_-3rem] lg:bg-[center_top_-14rem]">
         <div className="w-full min-h-[200px]  md:min-h-[300px] lg:px-[15%] px-5 bg-black/50 flex justify-center items-center first-section-text text-[1.75rem] md:text-[2.5rem] text-white uppercase">
           <h1>STCOGA Gallery</h1>
         </div>
       </section>
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
-        <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+        <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           Executives
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
@@ -62,7 +62,7 @@ const Gallery = () => {
       </section>
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
-        <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+        <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           Senior Secondary School Solar Power and Electricity Installation
           Project
         </h1>
@@ -101,7 +101,7 @@ const Gallery = () => {
       </section>
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
-        <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+        <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           Trip to Ardfoyle Convent, Cork Ireland
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
@@ -128,7 +128,7 @@ const Gallery = () => {
       </section>
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
-        <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+        <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           St Teresa’s College Ibadan 90th Anniversary and Fundraising{" "}
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
@@ -151,7 +151,7 @@ const Gallery = () => {
       </section>
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
-        <h1 className="text-[1.2rem] sm:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+        <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           NSF Quiz nite
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>

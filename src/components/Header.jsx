@@ -24,7 +24,7 @@ const Header = () => {
     <header>
       {/* desktop header */}
       <div
-        className={`sm:w-full md:w-full top-0 bg-white lg:px-[15%] px-12 py-7 fixed left-[50%] translate-x-[-50%] md:flex items-center z-30 hidden transition-all duration-500 shadow-md`}
+        className={`w-full md:w-full top-0 bg-white lg:px-[15%] px-8 py-7 fixed left-[50%] translate-x-[-50%] md:flex items-center z-30 hidden transition-all duration-500 shadow-md`}
       >
         <img
           alt=""
@@ -87,7 +87,7 @@ const Header = () => {
 
       {/* mobile header */}
       <div
-        className={`top-0 bg-white  md:hidden w-full h-[65px] px-6 fixed left-0 z-30 border-b-[0px] border-b-[#47a3b3] flex justify-between items-center shadow-md transition-all duration-500`}
+        className={`top-0 bg-white md:hidden w-full h-[65px] px-6 fixed left-0 z-30 border-b-[0px] border-b-[#47a3b3] flex justify-between items-center shadow-md transition-all duration-500`}
       >
         <Link to="/" className="mr-auto">
           {/* <img alt="" src="/images/logo-stcoga.jpeg" className="w-16 h-auto" /> */}
@@ -122,7 +122,7 @@ const Header = () => {
               onClick={hideDropdown}
               className="w-[35%] h-full float-left bg-transparent"
             ></div>
-            <ul className="slide float-right w-[65%] h-full bg-white px-[30px] text-[1rem] text-[#4b2a05] pt-[100px] uppercase">
+            <ul className="slide float-right w-[65%] h-full bg-white px-[30px] text-[1rem] text-[#4b2a05] pt-[100px] uppercase slide">
               <li className="my-4">
                 <Link to="/" onClick={hideDropdown}>
                   <div className="w-full">Home</div>
@@ -135,15 +135,14 @@ const Header = () => {
               </li>
 
               <li className="my-4">
-                <Link
-                  to="/"
+                <div
                   onClick={() => {
                     hideDropdown();
                     handleContact();
                   }}
                 >
                   <div className="w-full">contact</div>
-                </Link>
+                </div>
               </li>
             </ul>
           </div>
@@ -152,12 +151,12 @@ const Header = () => {
       {/*mobile header */}
 
       {openContact && (
-        <div className="w-full h-screen bg-black/40 fixed top-0 left-0 flex justify-center items-center z-10">
-          <div className="w-fit bg-white p-4 rounded-lg flex-col flex gap-4 justify-center relative">
-            <div className="bg-[#4b2a05] p-2 rounded-full cursor-pointer absolute top-2 right-2">
+        <div className="w-full h-screen bg-black/40 fixed top-0 left-0 flex justify-center items-center z-30">
+          <div className="w-fit bg-white p-4 rounded-lg flex-col flex gap-4 justify-center relative scale">
+            <div className="bg-[#4b2a05] p-1 rounded-full cursor-pointer absolute top-2 right-2">
               {" "}
               <img
-                className="w-7 h7"
+                className="w-4 md:w-7 h-4 md:h-7"
                 alt=""
                 src="/images/icons8-cancel-white-48.png"
                 onClick={() => {
@@ -166,38 +165,63 @@ const Header = () => {
                 }}
               />
             </div>
-            <h1 className="text-[1.2rem] sm:text-[2rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+            <h1 className="text-[1.2rem] md:text-[2rem] font-medium uppercase text-center mb-5 text-[#4b2a05] border-[#4b2a05] border-b">
               Contact Us
             </h1>
             <div className="flex gap-4">
-              <a href="tel:00447300313668">
-                {" "}
-                <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
-                  <img src="/images/phone.png" alt="" className="w-10 h-10" />
-                  <p className="">Call Us</p>
-                  {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
-                </div>
-              </a>
+              <div className="w-full grid grid-cols-3 md:flex gap-4 justify-center mt-0">
+                <a href="tel:00447300313668">
+                  {" "}
+                  <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                    <img
+                      src="/images/phone.png"
+                      alt=""
+                      className="md:w-14 md:h-14 w-10 h-10 "
+                    />
+                    <p className="hidden md:block">Call Us</p>
+                    {/* <p className="hidden md:blockfont-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                  </div>
+                </a>
 
-              <a href="https://wa.me/00447300313668">
-                <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                <a href="https://wa.me/00447300313668">
+                  <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                    <img
+                      src="/images/whatsapp.svg"
+                      alt=""
+                      className="md:w-14 md:h-14 w-10 h-10 "
+                    />
+                    <p className="hidden md:block">Whatsapp</p>
+                  </div>
+                </a>
+                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
-                    src="/images/whatsapp.svg"
+                    src="/images/icons8-facebook-48.png"
                     alt=""
-                    className="w-10 h-10"
+                    className="md:w-14 md:h-14 w-10 h-10 "
                   />
-                  <p className="">Whatsapp</p>
-                  {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                  <p className="hidden md:block">Facebook</p>
                 </div>
-              </a>
-              <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
-                <img
-                  src="/images/icons8-facebook-48.png"
-                  alt=""
-                  className="w-10 h-10"
-                />
-                <p className="">Facebook</p>
-                {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                <a href="https://twitter.com/stcogaukeurope">
+                  <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                    <img
+                      src="/images/icons8-twitter-48.png"
+                      alt=""
+                      className="md:w-14 md:h-14 w-10 h-10 "
+                    />
+                    <p className="hidden md:block">Twitter</p>
+                  </div>
+                </a>
+
+                <a href="https://www.instagram.com/stcoga_ukandeurope/">
+                  <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                    <img
+                      src="/images/icons8-instagram-48.png"
+                      alt=""
+                      className="md:w-14 md:h-14 w-10 h-10 "
+                    />
+                    <p className="hidden md:block">Instagram</p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
