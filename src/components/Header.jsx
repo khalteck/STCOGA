@@ -15,6 +15,11 @@ const Header = () => {
     setOpenMenu(false);
   };
 
+  const [openContact, setopenContact] = useState(false);
+  function handleContact() {
+    setopenContact((prevState) => !prevState);
+  }
+
   return (
     <header>
       {/* desktop header */}
@@ -66,8 +71,8 @@ const Header = () => {
             >
               Gallery
             </Link>
-            <Link
-              to="/"
+            <div
+              onClick={handleContact}
               className={`cursor-pointer px-2 py-1 ${
                 currentPage === "/contact"
                   ? "border-[#4b2a05] border-b-2"
@@ -75,7 +80,7 @@ const Header = () => {
               } whitespace-nowrap border-b-2 hover:border-[#4b2a05]`}
             >
               Contact
-            </Link>
+            </div>
           </div>
         </nav>
       </div>
@@ -130,7 +135,13 @@ const Header = () => {
               </li>
 
               <li className="my-4">
-                <Link to="/" onClick={hideDropdown}>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    hideDropdown();
+                    handleContact();
+                  }}
+                >
                   <div className="w-full">contact</div>
                 </Link>
               </li>
@@ -139,6 +150,59 @@ const Header = () => {
         )}
       </div>
       {/*mobile header */}
+
+      {openContact && (
+        <div className="w-full h-screen bg-black/40 fixed top-0 left-0 flex justify-center items-center z-10">
+          <div className="w-fit bg-white p-4 rounded-lg flex-col flex gap-4 justify-center relative">
+            <div className="bg-[#4b2a05] p-2 rounded-full cursor-pointer absolute top-2 right-2">
+              {" "}
+              <img
+                className="w-7 h7"
+                alt=""
+                src="/images/icons8-cancel-white-48.png"
+                onClick={() => {
+                  // handleClick();
+                  handleContact();
+                }}
+              />
+            </div>
+            <h1 className="text-[1.2rem] sm:text-[2rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+              Contact Us
+            </h1>
+            <div className="flex gap-4">
+              <a href="tel:00447300313668">
+                {" "}
+                <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                  <img src="/images/phone.png" alt="" className="w-10 h-10" />
+                  <p className="">Call Us</p>
+                  {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                </div>
+              </a>
+
+              <a href="https://wa.me/00447300313668">
+                <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                  <img
+                    src="/images/whatsapp.svg"
+                    alt=""
+                    className="w-10 h-10"
+                  />
+                  <p className="">Whatsapp</p>
+                  {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                </div>
+              </a>
+              <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                <img
+                  src="/images/icons8-facebook-48.png"
+                  alt=""
+                  className="w-10 h-10"
+                />
+                <p className="">Facebook</p>
+                {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
