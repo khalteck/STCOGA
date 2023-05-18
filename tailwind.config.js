@@ -11,7 +11,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        sec: "url('/images/ireland10.jpeg')",
+        sec: "url('/images/second.jpeg')",
         home: "url('/images/homebg.jpg')",
         gallery: "url('/images/gallery.jpeg')",
       },

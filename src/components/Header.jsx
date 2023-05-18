@@ -193,14 +193,16 @@ const Header = () => {
                     <p className="hidden md:block">Whatsapp</p>
                   </div>
                 </a>
-                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
-                  <img
-                    src="/images/icons8-facebook-48.png"
-                    alt=""
-                    className="md:w-14 md:h-14 w-10 h-10 "
-                  />
-                  <p className="hidden md:block">Facebook</p>
-                </div>
+                <a href="https://www.facebook.com/profile.php?id=100092990044684">
+                  <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                    <img
+                      src="/images/icons8-facebook-48.png"
+                      alt=""
+                      className="md:w-14 md:h-14 w-10 h-10 "
+                    />
+                    {/* <p className="hidden md:block">Facebook</p> */}
+                  </div>
+                </a>
                 <a href="https://twitter.com/stcogaukeurope">
                   <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                     <img

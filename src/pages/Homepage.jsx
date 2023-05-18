@@ -85,14 +85,16 @@ const Homepage = () => {
                   {/* <p className="hidden md:block">Whatsapp</p> */}
                 </div>
               </a>
-              <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
-                <img
-                  src="/images/icons8-facebook-48.png"
-                  alt=""
-                  className="md:w-14 md:h-14 w-10 h-10 "
-                />
-                {/* <p className="hidden md:block">Facebook</p> */}
-              </div>
+              <a href="https://www.facebook.com/profile.php?id=100092990044684">
+                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                  <img
+                    src="/images/icons8-facebook-48.png"
+                    alt=""
+                    className="md:w-14 md:h-14 w-10 h-10 "
+                  />
+                  {/* <p className="hidden md:block">Facebook</p> */}
+                </div>
+              </a>
               <a href="https://twitter.com/stcogaukeurope">
                 <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
@@ -118,7 +120,7 @@ const Homepage = () => {
           </div>
         </section>
 
-        <section className="w-full min-h-[550px] bg-white text-slate-700 bg-sec bg-no-repeat bg-cover bg-center md:bg-[center_top_-10rem]">
+        <section className="w-full min-h-[550px] bg-white text-slate-700 bg-sec bg-no-repeat bg-cover bg-center md:bg-[center_top_-20rem]">
           <div className="w-full min-h-[550px] bg-black/50 py-10 lg:px-[15%] px-5 flex flex-col items-center justify-center">
             <h1 className="text-[1.2rem] md:text-[2rem] font-medium uppercase text-center mb-5 text-white first-section-text">
               STCOGA UK & EUROPE

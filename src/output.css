@@ -713,16 +713,12 @@ video {
   min-height: 400px;
 }
 
-.min-h-\[500px\] {
-  min-height: 500px;
+.min-h-\[550px\] {
+  min-height: 550px;
 }
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-\[550px\] {
-  min-height: 550px;
 }
 
 .w-10 {
@@ -944,10 +940,6 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black\/10 {
-  background-color: rgb(0 0 0 / 0.1);
-}
-
 .bg-black\/40 {
   background-color: rgb(0 0 0 / 0.4);
 }
@@ -987,7 +979,7 @@ video {
 }
 
 .bg-sec {
-  background-image: url('/images/ireland10.jpeg');
+  background-image: url('/images/second.jpeg');
 }
 
 .bg-cover {
@@ -1329,25 +1321,20 @@ video {
     border-radius: 1.5rem;
   }
 
-  .md\:border-\[\#a16207\] {
-    --tw-border-opacity: 1;
-    border-color: rgb(161 98 7 / var(--tw-border-opacity));
-  }
-
-  .md\:bg-\[center_top_-25rem\] {
-    background-position: center top -25rem;
+  .md\:bg-\[center_top_-10rem\] {
+    background-position: center top -10rem;
   }
 
   .md\:bg-\[center_top_-3rem\] {
     background-position: center top -3rem;
   }
 
-  .md\:bg-\[center_top_-15rem\] {
-    background-position: center top -15rem;
+  .md\:bg-\[center_top_-5rem\] {
+    background-position: center top -5rem;
   }
 
-  .md\:bg-\[center_top_-10rem\] {
-    background-position: center top -10rem;
+  .md\:bg-\[center_top_-20rem\] {
+    background-position: center top -20rem;
   }
 
   .md\:p-8 {

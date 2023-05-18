@@ -8,6 +8,7 @@ import execData from "../data/exec.json";
 import projectData from "../data/project.json";
 import niteData from "../data/quiznite.json";
 import fundraiserData from "../data/fundraiser.json";
+import tripVideos from "../data/tripvideos.json";
 
 const Gallery = () => {
   const { loader } = useAppContext();
@@ -59,6 +60,36 @@ const Gallery = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="w-full flex md:flex-row flex-col gap-5 lg:px-[15%] px-5">
+        <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700">
+          <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+            STCOGA UK & EUROPE - INCOMING EXCO
+          </h1>
+          <iframe
+            className="w-full min-h-[400px]"
+            src="https://www.youtube.com/embed/vdjjz5g4noM"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </section>
+
+        <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700">
+          <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+            STCOGA UK & EUROPE - RECENT PROJECTS
+          </h1>
+          <iframe
+            className="w-full min-h-[400px]"
+            src="https://www.youtube.com/embed/sCvRt_Bw2Dk"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </section>
       </section>
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
@@ -116,6 +147,33 @@ const Gallery = () => {
                 <img
                   alt=""
                   src={item?.image}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+                {/* <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center">
+                  fullname
+                </p> */}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
+        <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+          Trip to Ardfoyle Convent, Cork Ireland - [VIDEOS]
+        </h1>
+        <p className="text-[.85rem]">Scroll to the left to see more...</p>
+
+        <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
+          <div className="flex gap-4 snap-mandatory snap-x ">
+            {tripVideos?.map((item, index) => (
+              <div
+                key={index}
+                className="w-[300px] md:w-[400px] relative snap-start snap-always"
+              >
+                <video
+                  src={item?.video}
+                  controls
                   className="w-full h-full object-cover rounded-lg"
                 />
                 {/* <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center">
