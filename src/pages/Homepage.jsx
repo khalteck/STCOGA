@@ -18,7 +18,7 @@ const Homepage = () => {
       <main className="w-full min-h-screen bg-blue-50 pt-16 md:pt-[90px]">
         <section className="w-full h-[400px] sm:h-[650px] lg:h-[90vh] bg-home bg-no-repeat bg-cover bg-center">
           <div className="overlay w-full h-[400px] sm:h-[650px] lg:h-[90vh] flex justify-center items-center relative">
-            <div className="w-full md:w-fit h-fit bg-[#4b2a05]/30 md:rounded-3xl p-3 md:p-8 flex flex-col justify-center items-center">
+            <div className="w-full md:w-fit h-fit bg-[#4b2a05]/30 md:rounded-3xl p-3 md:p-8 flex flex-col justify-center items-center z-10">
               <h1 className="text-white text-[1.2rem] md:text-[2.75em] text-center uppercase first-section-text">
                 ST Teresa’s College Old Girls Association <br /> (STCOGA) UK &
                 EUROPE
@@ -61,36 +61,59 @@ const Homepage = () => {
               present, and forge a path for future generations of graduates.
             </p>
 
-            <div className="w-full flex-col md:flex-row flex gap-4 justify-center mt-8">
+            <div className="w-full grid grid-cols-3 md:flex gap-4 justify-center mt-8">
               <a href="tel:00447300313668">
                 {" "}
-                <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
-                  <img src="/images/phone.png" alt="" className="w-14 h-14" />
-                  <p className="">Call Us</p>
-                  {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                  <img
+                    src="/images/phone.png"
+                    alt=""
+                    className="md:w-14 md:h-14 w-10 h-10 "
+                  />
+                  <p className="hidden md:block">Call Us</p>
+                  {/* <p className="hidden md:blockfont-medium text-[1.25rem]">+1 456 777 6341</p> */}
                 </div>
               </a>
 
               <a href="https://wa.me/00447300313668">
-                <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
                   <img
                     src="/images/whatsapp.svg"
                     alt=""
-                    className="w-14 h-14"
+                    className="md:w-14 md:h-14 w-10 h-10 "
                   />
-                  <p className="">Whatsapp</p>
-                  {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                  <p className="hidden md:block">Whatsapp</p>
                 </div>
               </a>
-              <div className="bg-white/60 shadow-md py-6 px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+              <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
                 <img
                   src="/images/icons8-facebook-48.png"
                   alt=""
-                  className="w-14 h-14"
+                  className="md:w-14 md:h-14 w-10 h-10 "
                 />
-                <p className="">Facebook</p>
-                {/* <p className="font-medium text-[1.25rem]">+1 456 777 6341</p> */}
+                <p className="hidden md:block">Facebook</p>
               </div>
+              <a href="https://twitter.com/stcogaukeurope">
+                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                  <img
+                    src="/images/icons8-twitter-48.png"
+                    alt=""
+                    className="md:w-14 md:h-14 w-10 h-10 "
+                  />
+                  <p className="hidden md:block">Twitter</p>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/stcoga_ukandeurope/">
+                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md flex flex-col gap-1 justify-center items-center font-medium">
+                  <img
+                    src="/images/icons8-instagram-48.png"
+                    alt=""
+                    className="md:w-14 md:h-14 w-10 h-10 "
+                  />
+                  <p className="hidden md:block">Instagram</p>
+                </div>
+              </a>
             </div>
           </div>
         </section>
