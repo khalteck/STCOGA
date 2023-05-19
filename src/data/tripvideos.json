@@ -1,29 +1,26 @@
 [
   {
-    "video": "/images/vid1.jpeg"
+    "video": "/images/vid1.mp4"
   },
   {
-    "video": "/images/vid2.jpeg"
+    "video": "/images/vid2.mp4"
   },
   {
-    "video": "/images/vid3.jpeg"
+    "video": "/images/vid3.mp4"
   },
   {
-    "video": "/images/vid4.jpeg"
+    "video": "/images/vid5.mp4"
   },
   {
-    "video": "/images/vid5.jpeg"
+    "video": "/images/vid6.mp4"
   },
   {
-    "video": "/images/vid6.jpeg"
+    "video": "/images/vid7.mp4"
   },
   {
-    "video": "/images/vid7.jpeg"
+    "video": "/images/vid8.mp4"
   },
   {
-    "video": "/images/vid8.jpeg"
-  },
-  {
-    "video": "/images/vid9.jpeg"
+    "video": "/images/vid9.mp4"
   }
 ]

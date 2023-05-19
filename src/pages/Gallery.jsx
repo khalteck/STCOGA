@@ -8,7 +8,7 @@ import execData from "../data/exec.json";
 import projectData from "../data/project.json";
 import niteData from "../data/quiznite.json";
 import fundraiserData from "../data/fundraiser.json";
-import tripVideos from "../data/tripvideos.json";
+// import tripVideos from "../data/tripvideos.json";
 
 const Gallery = () => {
   const { loader } = useAppContext();
@@ -144,11 +144,19 @@ const Gallery = () => {
                 key={index}
                 className="w-[300px] md:w-[400px] relative snap-start snap-always"
               >
-                <img
-                  alt=""
-                  src={item?.image}
-                  className="w-full h-full object-cover rounded-lg"
-                />
+                {item?.image ? (
+                  <img
+                    alt=""
+                    src={item?.image}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                ) : (
+                  <video
+                    src={item?.video}
+                    controls
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                )}
                 {/* <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center">
                   fullname
                 </p> */}
@@ -158,7 +166,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
+      {/* <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           Trip to Ardfoyle Convent, Cork Ireland - [VIDEOS]
         </h1>
@@ -176,14 +184,11 @@ const Gallery = () => {
                   controls
                   className="w-full h-full object-cover rounded-lg"
                 />
-                {/* <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center">
-                  fullname
-                </p> */}
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
