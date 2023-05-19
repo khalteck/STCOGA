@@ -55,8 +55,8 @@ const Homepage = () => {
             </h1>
 
             <p className="text-[1rem] md:text-[1.25rem] text-center">
-              Step into a world of nostalgia and lifelong connections at St.
-              Teresa’s College Old Girls Association (STCOGA) UK & EUROPE
+              Step into a world of nostalgia and lifelong connections at
+              St.Teresa’s College Old Girls Association (STCOGA) UK & EUROPE
               website. <br /> Join us as we honor our past, celebrate our
               present, and forge a path for future generations of graduates.
             </p>
