@@ -55,7 +55,7 @@ const Homepage = () => {
             </h1>
 
             <p className="text-[1rem] md:text-[1.25rem] text-center">
-              Step into a world of nostalgia and lifelong connections at ST
+              Step into a world of nostalgia and lifelong connections at St.
               Teresa’s College Old Girls Association (STCOGA) UK & EUROPE
               website. <br /> Join us as we honor our past, celebrate our
               present, and forge a path for future generations of graduates.
@@ -75,7 +75,7 @@ const Homepage = () => {
                 </div>
               </a>
 
-              <a href="https://wa.me/00447300313668">
+              <a href="https://wa.me/+447300313668">
                 <div className="bg-white/60 shadow-md p-2 md:py-4 md:px-6 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
                     src="/images/whatsapp.svg"
