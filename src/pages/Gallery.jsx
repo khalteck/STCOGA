@@ -3,12 +3,11 @@ import Header from "../components/Header";
 import Loader from "../components/Loader";
 import { useAppContext } from "../contexts/AppContext";
 import ScrollToTop from "../ScrollToTop";
-import irelandData from "../data/ireland.json";
+import trip from "../data/trip.json";
 import execData from "../data/exec.json";
 import projectData from "../data/project.json";
 import niteData from "../data/quiznite.json";
 import fundraiserData from "../data/fundraiser.json";
-// import tripVideos from "../data/tripvideos.json";
 
 const Gallery = () => {
   const { loader } = useAppContext();
@@ -73,7 +72,7 @@ const Gallery = () => {
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </section>
 
@@ -87,7 +86,7 @@ const Gallery = () => {
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </section>
       </section>
@@ -139,7 +138,7 @@ const Gallery = () => {
 
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
           <div className="flex gap-4 snap-mandatory snap-x ">
-            {irelandData?.map((item, index) => (
+            {trip?.map((item, index) => (
               <div
                 key={index}
                 className="w-[300px] md:w-[400px] relative snap-start snap-always"
@@ -166,38 +165,14 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
-        <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
-          Trip to Ardfoyle Convent, Cork Ireland - [VIDEOS]
-        </h1>
-        <p className="text-[.85rem]">Scroll to the left to see more...</p>
-
-        <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
-          <div className="flex gap-4 snap-mandatory snap-x ">
-            {tripVideos?.map((item, index) => (
-              <div
-                key={index}
-                className="w-[300px] md:w-[400px] relative snap-start snap-always"
-              >
-                <video
-                  src={item?.video}
-                  controls
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
-          St Teresa’s College Ibadan 90th Anniversary and Fundraising{" "}
+          NSF Quiz nite
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
           <div className="flex gap-4 snap-mandatory snap-x ">
-            {fundraiserData?.map((item, index) => (
+            {niteData?.map((item, index) => (
               <div
                 key={index}
                 className="w-[300px] md:w-[400px] relative snap-start snap-always"
@@ -215,12 +190,12 @@ const Gallery = () => {
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
-          NSF Quiz nite
+          St Teresa’s College Ibadan 90th Anniversary and Fundraising{" "}
         </h1>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
           <div className="flex gap-4 snap-mandatory snap-x ">
-            {niteData?.map((item, index) => (
+            {fundraiserData?.map((item, index) => (
               <div
                 key={index}
                 className="w-[300px] md:w-[400px] relative snap-start snap-always"

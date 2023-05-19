@@ -64,7 +64,7 @@ const Homepage = () => {
             <div className="w-full grid grid-cols-3 md:flex gap-4 justify-center mt-8">
               <a href="tel:00447300313668">
                 {" "}
-                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                <div className="bg-white/60 shadow-md p-2 md:py-4 md:px-6 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
                     src="/images/phone.png"
                     alt=""
@@ -76,7 +76,7 @@ const Homepage = () => {
               </a>
 
               <a href="https://wa.me/00447300313668">
-                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                <div className="bg-white/60 shadow-md p-2 md:py-4 md:px-6 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
                     src="/images/whatsapp.svg"
                     alt=""
@@ -86,7 +86,7 @@ const Homepage = () => {
                 </div>
               </a>
               <a href="https://www.facebook.com/profile.php?id=100092990044684">
-                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                <div className="bg-white/60 shadow-md p-2 md:py-4 md:px-6 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
                     src="/images/icons8-facebook-48.png"
                     alt=""
@@ -96,7 +96,7 @@ const Homepage = () => {
                 </div>
               </a>
               <a href="https://twitter.com/stcogaukeurope">
-                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                <div className="bg-white/60 shadow-md p-2 md:py-4 md:px-6 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
                     src="/images/icons8-twitter-48.png"
                     alt=""
@@ -107,13 +107,24 @@ const Homepage = () => {
               </a>
 
               <a href="https://www.instagram.com/stcoga_ukandeurope/">
-                <div className="bg-white/60 shadow-md p-2 md:py-6 md:px-10 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                <div className="bg-white/60 shadow-md p-2 md:py-4 md:px-6 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
                   <img
                     src="/images/icons8-instagram-48.png"
                     alt=""
                     className="md:w-14 md:h-14 w-10 h-10 "
                   />
                   {/* <p className="hidden md:block">Instagram</p> */}
+                </div>
+              </a>
+
+              <a href="mailto:info@stcogaukandeurope.co.uk">
+                <div className="bg-white/60 shadow-md p-2 md:py-4 md:px-6 rounded-md hover:bg-[#4b2a05]/20 flex flex-col gap-1 justify-center items-center font-medium">
+                  <img
+                    src="/images/icons8-email-48.png"
+                    alt=""
+                    className="md:w-14 md:h-14 w-10 h-10 "
+                  />
+                  {/* <p className="hidden md:block font-normal">Email</p> */}
                 </div>
               </a>
             </div>
