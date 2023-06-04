@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Loader from "../components/Loader";
 import { useAppContext } from "../contexts/AppContext";
 import ScrollToTop from "../ScrollToTop";
+import shop from "../data/shop.json";
 
 const Homepage = () => {
   const { loader } = useAppContext();
@@ -144,6 +145,49 @@ const Homepage = () => {
               View Gallery
             </button>
           </div>
+        </section>
+
+        <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 mt-4 relative">
+          <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+            STCOGA Alumni Shop
+          </h1>
+          <img
+            src="/images/icons8-shop-48.png"
+            alt=""
+            className="md:w-[80px] md:h-[80px] w-14 h-14 absolute right-4 top-0"
+          />
+          <p className="text-[.85rem]">Swipe left to see more...</p>
+          <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
+            <div className="flex gap-4 snap-mandatory snap-x ">
+              {shop?.map((item, index) => (
+                <div
+                  key={index}
+                  className="w-[300px] md:w-[400px] relative snap-start snap-always"
+                >
+                  <img
+                    alt=""
+                    src={item?.image}
+                    className="w-full h-[320px] object-cover rounded-lg"
+                  />
+                  <a href="https://wa.me/+447300313668">
+                    <button className="px-8 py-1 mt-3 bg-[#4b2a05] text-white rounded-md hover:opacity-70">
+                      Buy
+                    </button>
+                  </a>
+                  <p
+                    className={`absolute bottom-10 left-0 w-full bg-black bg-opacity-70 text-white p-2 text-center`}
+                  >
+                    {item?.name}
+                  </p>
+                  <p
+                    className={`absolute top-0 left-0 w-fit rounded-full bg-black bg-opacity-70 text-white p-4 text-[1.2rem] font-bold text-center`}
+                  >
+                    {item?.price}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>{" "}
         </section>
       </main>
       <Footer />
