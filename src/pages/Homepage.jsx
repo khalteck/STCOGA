@@ -295,7 +295,7 @@ const Homepage = () => {
                   coming together as one, we can and will create that “something
                   special” that is powerful enough to move STCOGA UK and Europe
                   forward to greater heights. <br />
-                  <br /> Thank you and God Bless!`;
+                  <br /> Thank you and God Bless!
                 </p>
               </div>
             </div>
