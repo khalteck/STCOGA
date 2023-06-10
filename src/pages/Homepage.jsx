@@ -6,10 +6,28 @@ import Loader from "../components/Loader";
 import { useAppContext } from "../contexts/AppContext";
 import ScrollToTop from "../ScrollToTop";
 import shop from "../data/shop.json";
+import { useEffect, useState } from "react";
 
 const Homepage = () => {
   const { loader } = useAppContext();
   const navigate = useNavigate();
+
+  const [truncatedText, setTruncatedText] = useState("");
+
+  useEffect(() => {
+    const originalText = `A happy Sunday to all! First and foremost, \n I would like to thank the Almighty God, our creator and Giver of life for the gift of life and making this day happen. A day the Lord has made and in which we shall rejoice and be glad. I would like to express my gratitude to everyone online today. It is a privilege and is amazing being sworn in as incoming president of our great school. Up School!! Up brown and white!! I would like to recognize and thank the members of the Electoral Committee, Sisters Helen Adefioye (Chair), Funmi Ibirogba, Ronke Adesina and Adeola Aderibigbe. I want to thank the outgoing President and exco for the confidence they have shown in me and their welcoming embrace. I accept my new role with a sense of both honour and humility. Now that I have gotten appreciation done, In the days ahead, we will focus on the future of STCOGA together. Please note the word “together”. I would like to emphasise and state boldly that I do not belong to any faction. I prefer to be independent, making a single, unified UK and Europe Chapter my priority In life we all have different political beliefs, even with religion and that has not stopped us from being friends or sisters. Some believe in the Labour party, some are Conservatives, the green party, etc. This has nothing to do with STCOGA. We will all work together toward supporting our Alma Mater. I assure you, we will work hard on your behalf, listen to your ideas, and do everything in our capability to build on the foundations laid by Caroline Pedro and all other Past presidents. Let us be grateful and celebrate the path that was travelled to get us here and thank all who were part of the journey. It is, after all, why STCOGA is here today. To my sisters in the new EXCO, I look forward to working together with you as we do our best to deliver what we have promised in our manifestos. With your support we will make the visions of this esteemed group a reality. No one person has all the answers nor can we as an EXCO do it all without your support. Together we must be strong, cooperate to achieve our endeavours and objective of giving back to our great Alma Mater. I am walking in new directions, and will therefore be asking a lot of questions, learning about aspirations, what people are proudest of and what they are anxious about as we move forward together. More than anything, I will be listening. I hope there will be no shortage of opinions or ideas. I am sure they will be voiced with a desire to make STCOGA better.Reading messages on the chat group, I have observed the resilient nature of our members and outgoing exco. I have read criticism sometimes quite negative and how they have endured it and the challenges they faced too. I have observed their deep commitment to reach new heights. Today, though, I will share what I have come to see as my greatest aspirations: 1. A unified UK and Europe chapter 2. Focus on well – being of members – This would include a. Family-oriented events, b. Time for me breaks - short ladies’ holidays/spas 3. Support the move to make STC an excellent, relevant Secondary School 4. Support businesses of members 5. Workshops to enhance/gain new skills 6. Increase membership 7. Increased participation and volume of financially active members On that point – do we have any event planners in the house? I want to encourage more participation and financially active members to enable us meet our commitments to our Alma Mater. We will support St Teresa’s as they face these challenges to ensure that the students leave with skills, knowledge and adaptability to be future leaders and contribute to society at large. Finally, I am confident that, unified together, we will find ways to not only meet the high expectations we have for ourselves, but exceed those you have for us. We all share a common bond and journey. Through our coming together as one, we can and will create that “something special” that is powerful enough to move STCOGA UK and Europe forward to greater heights. Thank you and God Bless!`;
+
+    if (originalText.length > 200) {
+      setTruncatedText(originalText.slice(0, 550) + "...");
+    } else {
+      setTruncatedText(originalText);
+    }
+  }, []);
+
+  const [showMore, setShowMore] = useState(false);
+  function toggleShowMore() {
+    setShowMore((prev) => !prev);
+  }
 
   return (
     <>
@@ -145,6 +163,143 @@ const Homepage = () => {
               View Gallery
             </button>
           </div>
+        </section>
+
+        <section className="w-full py-10 mb-10 text-slate-700 lg:px-[15%] px-5 mt-4 relative">
+          <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-6 text-[#4b2a05]">
+            Speech from the President, Mopelola Toyobo{" "}
+          </h1>
+
+          <div className="w-full flex flex-col md:flex-row gap-5 relative top-10">
+            <div className="border-2 border-[#4b2a05] w-[90%] sm:w-fit mx-auto">
+              {" "}
+              <img
+                src="/images/pres.jpeg"
+                alt=""
+                className="w-full sm:w-[400px] md:w-[300px] h-[300px] object-fit object-cover border border-[#4b2a05] relative top-[-20px] left-[-20px]"
+              />
+            </div>
+            <div className="w-full md:w-[60%]">
+              <div className="text-[1.1rem] tracking-wider">
+                {truncatedText?.split("\n").map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
+              </div>
+              <div className="w-full text-center">
+                <button
+                  onClick={toggleShowMore}
+                  className="uppercase px-10 py-3 mx-auto border-[#4b2a05] border-2 text-[#4b2a05] hover:bg-[#4b2a05]/60 hover:border-[#4b2a05]/60 mt-5 transition-all duration-300"
+                >
+                  Read more
+                </button>{" "}
+              </div>
+            </div>
+          </div>
+
+          {showMore && (
+            <div className="w-full h-screen px-3 pt-[130px] md:pt-[150px] pb-14 fixed top-0 left-0 bg-black/50 flex justify-center z-10">
+              <div className="w-full text-end mb-4 absolute top-[80px] md:top-[120px] right-1 md:right-3">
+                <button
+                  onClick={toggleShowMore}
+                  className="px-4 py-2 rounded-lg text-[.85rem] bg-[#4b2a05] text-white border-white border"
+                >
+                  Close
+                </button>
+              </div>
+              <div className="w-full md:w-[650px] px-3 py-5 sm:px-5 md:p-6 bg-white rounded-lg relative overflow-y-auto scale">
+                <h3 className="font-bold text-[1.25rem] mb-6 text-center">
+                  Speech from the President, Mopelola Toyobo
+                </h3>
+                <p className="text-[1.1rem] tracking-wide">
+                  A happy Sunday to all! First and foremost,
+                  <br />
+                  <br /> I would like to thank the Almighty God, our creator and
+                  Giver of life for the gift of life and making this day happen.
+                  A day the Lord has made and in which we shall rejoice and be
+                  glad. <br />
+                  <br /> I would like to express my gratitude to everyone online
+                  today.
+                  <br /> It is a privilege and is amazing being sworn in as
+                  incoming president of our great school. Up School!! Up brown
+                  and white!! I would like to recognize and thank the members of
+                  the Electoral Committee, Sisters Helen Adefioye (Chair), Funmi
+                  Ibirogba, Ronke Adesina and Adeola Aderibigbe. I want to thank
+                  the outgoing President and exco for the confidence they have
+                  shown in me and their welcoming embrace. <br />
+                  <br /> I accept my new role with a sense of both honour and
+                  humility.
+                  <br /> Now that I have gotten appreciation done, In the days
+                  ahead, we will focus on the future of STCOGA together. Please
+                  note the word “together”. I would like to emphasise and state
+                  boldly that I do not belong to any faction. I prefer to be
+                  independent, making a single, unified UK and Europe Chapter my
+                  priority In life we all have different political beliefs, even
+                  with religion and that has not stopped us from being friends
+                  or sisters. Some believe in the Labour party, some are
+                  Conservatives, the green party, etc. This has nothing to do
+                  with STCOGA. We will all work together toward supporting our
+                  Alma Mater. <br />
+                  <br /> I assure you, we will work hard on your behalf, listen
+                  to your ideas, and do everything in our capability to build on
+                  the foundations laid by Caroline Pedro and all other Past
+                  presidents. Let us be grateful and celebrate the path that was
+                  travelled to get us here and thank all who were part of the
+                  journey. It is, after all, why STCOGA is here today. <br />
+                  <br /> To my sisters in the new EXCO, I look forward to
+                  working together with you as we do our best to deliver what we
+                  have promised in our manifestos. <br />
+                  <br /> With your support we will make the visions of this
+                  esteemed group a reality. No one person has all the answers
+                  nor can we as an EXCO do it all without your support. Together
+                  we must be strong, cooperate to achieve our endeavours and
+                  objective of giving back to our great Alma Mater. <br />
+                  <br /> I am walking in new directions, and will therefore be
+                  asking a lot of questions, learning about aspirations, what
+                  people are proudest of and what they are anxious about as we
+                  move forward together. More than anything, I will be
+                  listening. I hope there will be no shortage of opinions or
+                  ideas. I am sure they will be voiced with a desire to make
+                  STCOGA better. <br />
+                  <br /> Reading messages on the chat group, I have observed the
+                  resilient nature of our members and outgoing exco. I have read
+                  criticism sometimes quite negative and how they have endured
+                  it and the challenges they faced too. I have observed their
+                  deep commitment to reach new heights. <br />
+                  <br /> Today, though, I will share what I have come to see as
+                  my greatest aspirations: <br />
+                  1. A unified UK and Europe chapter
+                  <br /> 2. Focus on well – being of members – This would
+                  include
+                  <br /> a. Family-oriented events,
+                  <br /> b. Time for me breaks - short ladies’ holidays/spas
+                  <br /> 3. Support the move to make STC an excellent, relevant
+                  Secondary School
+                  <br />
+                  4. Support businesses of members
+                  <br /> 5. Workshops to enhance/gain new skills
+                  <br /> 6. Increase membership <br />
+                  7. Increased participation and volume of financially active
+                  members <br />
+                  <br />
+                  On that point – do we have any event planners in the house?
+                  <br /> I want to encourage more participation and financially
+                  active members to enable us meet our commitments to our Alma
+                  Mater. We will support St Teresa’s as they face these
+                  challenges to ensure that the students leave with skills,
+                  knowledge and adaptability to be future leaders and contribute
+                  to society at large. <br />
+                  <br /> Finally, I am confident that, unified together, we will
+                  find ways to not only meet the high expectations we have for
+                  ourselves, but exceed those you have for us. <br />
+                  <br /> We all share a common bond and journey. Through our
+                  coming together as one, we can and will create that “something
+                  special” that is powerful enough to move STCOGA UK and Europe
+                  forward to greater heights. <br />
+                  <br /> Thank you and God Bless!`;
+                </p>
+              </div>
+            </div>
+          )}
         </section>
 
         <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 mt-4 relative">
