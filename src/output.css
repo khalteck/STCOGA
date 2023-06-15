@@ -1197,6 +1197,10 @@ video {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-end {
   text-align: end;
 }
@@ -1560,6 +1564,10 @@ video {
 
   .md\:text-\[2rem\] {
     font-size: 2rem;
+  }
+
+  .md\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
   }
 
   .md\:font-bold {
