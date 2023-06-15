@@ -90,27 +90,15 @@ const Gallery = () => {
           ></iframe>
         </section>
       </section>
-      {/* <section className="w-full flex md:flex-row flex-col gap-5 lg:px-[15%] px-5">
-        <section className="w-full md:w-[500px] lg:w-1/2 min-h-[400px] py-10 mb-5 text-slate-700">
-          <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
-            STCOGA UK AND EUROPE PAST EXECUTIVES 2018 - 2023
-          </h1>
-          <iframe
-            className="w-full min-h-[400px]"
-            src="https://www.youtube.com/embed/YykQDVprdro"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </section>
-      </section> */}
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
           Senior Secondary School Solar Power and Electricity Installation
           Project
         </h1>
+        <h3 className="w-full font-bold text-[1.25rem] mb-6 text-end text-[#4b2a05]">
+          February - March 2023
+        </h3>
         <p className="text-[.85rem]">Scroll to the left to see more...</p>
         <div className="w-full h-[400px] border-2 border-[#4b2a05]/50 flex gap-4 overflow-x-auto p-4 rounded-lg box">
           <div className="flex gap-4 snap-mandatory snap-x ">
