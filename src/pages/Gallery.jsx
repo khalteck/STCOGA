@@ -90,6 +90,21 @@ const Gallery = () => {
           ></iframe>
         </section>
       </section>
+      <section className="w-full flex md:flex-row flex-col gap-5 lg:px-[15%] px-5">
+        <section className="w-full md:w-[500px] lg:w-1/2 min-h-[400px] py-10 mb-5 text-slate-700">
+          <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
+            STCOGA UK AND EUROPE PAST EXECUTIVES 2018 - 2023
+          </h1>
+          <iframe
+            className="w-full min-h-[400px]"
+            src="https://www.youtube.com/embed/YykQDVprdro"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </section>
+      </section>
 
       <section className="w-full min-h-[400px] py-10 mb-5 text-slate-700 lg:px-[15%] px-5 ">
         <h1 className="text-[1.2rem] md:text-[1.75rem] font-medium uppercase text-center mb-5 text-[#4b2a05]">
